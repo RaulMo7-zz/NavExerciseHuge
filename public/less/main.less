@@ -1,0 +1,188 @@
+html,
+html * {
+	list-style: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	ul, li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+body {
+  background: @white;
+  color: @black;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+	background-color: @hg-magenta;
+	color: @white;
+	padding: 0;
+	width: 100%;
+	float: left;
+	z-index: 20;
+	position: relative;
+
+	h1 {
+		float: left;
+		padding: 24px 0 24px 24px;
+		margin: 0 48px 0 0;
+
+		img {
+			width: 60px;
+			float: left;
+		}
+	}
+
+	.hg-mob-menu {
+		display: none;
+	}
+
+	nav {
+		float: left;
+
+		.hg-mob-copyright {
+			display: none;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav-element {
+			float: left;
+			position: relative;
+
+			&.open {
+				background-color: @white;
+
+				.first-level {
+					color: @hg-magenta;
+				}
+			}
+
+			a {
+				padding: 24px;
+				float: left;
+				.first-level-desktop-1
+			}
+
+			&:hover {
+				cursor: pointer;
+				background-color: @white;
+
+				.first-level {
+					color: @hg-magenta;
+				}
+			}
+		}
+
+		.sub-nav-element {
+			position: absolute;
+			left: 0;
+			top: 72px;
+			display: none;
+			width: auto;
+			padding: 12px 0;
+			background-color: @white;
+			z-index: 20;
+
+			&.display {
+				display: block;
+			}
+
+			li {
+				float: left;
+				width: 100%;
+			}
+
+
+			a {
+				font-family: 'GalaxieBook';
+				font-size: @font-level-2-desktop-1;
+				color: @black;
+				white-space: nowrap;
+				padding: 16px 24px;
+				width: 100%;
+
+				&:hover {
+					background-color: @light-gray;
+					color: @hg-magenta;
+				}
+			}
+		}
+	}
+}
+
+.hg-content-wrapper {
+	float: left;
+	width: 100%;
+	position: relative;
+	z-index: 10;
+
+	#hg-masking {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: @translucent-black;
+		z-index: 15;
+		display: none;
+		-webkit-transform: translate(0, -72px);
+		-moz-transform: translate(0, -72px);
+		transform: translate(0, -72px);
+
+		&.display {
+			display: block;
+		}
+	}
+
+	section {
+		position: relative;
+
+		.banner {
+			width: 100%;
+			min-height: 640px;
+			background: url(../images/background-image.jpg) center;
+			background-size: cover;
+		}
+
+		.hg-headline {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+
+			h2 {
+				padding: 0px 24px;
+				.headline-desktop-1
+			}
+		}
+	}
+
+	.text-container {
+		float: left;
+		width: 100%;
+		padding: 0 24px;
+		margin-top: 60px;
+
+		p {
+			margin: 0 auto;
+			max-width: 968px;
+			.bodytext-desktop-1
+		}
+	}
+}
+
+

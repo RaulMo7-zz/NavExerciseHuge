@@ -1,12 +1,11 @@
 {
-  "name": "NavExercise",
+  "name": "huge-nav-exercise",
   "description": "Exercise for candidates to complete where they will build a responsive nav driven from json",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "authors": [
-    "Wes Hatch <whatch@hugeinc.com>",
-    "Karl Stanton <kstanton@hugeinc.com>"
+    "Raul Molina <remolina7@gmail.com>"
   ],
-  "license": "© 2016 Huge. All Rights Reserved.",
+  "license": "© 2014 Huge. All Rights Reserved.",
   "homepage": "https://github.com/hugeinc/NavExercise",
   "bugs": {
     "url": "https://github.com/hugeinc/NavExercise/issues"
@@ -14,10 +13,16 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "start": "gulp && node ./bin/www"
   },
   "dependencies": {
     "express": "~4.2.0",
     "morgan": "~1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2"
   }
 }
